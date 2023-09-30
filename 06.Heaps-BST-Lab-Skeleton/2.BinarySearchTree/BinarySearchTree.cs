@@ -38,28 +38,28 @@ public class BinarySearchTree<T> : IBinarySearchTree<T>
 
     public bool Contains(T element)
     {
-        if (this.root == null)
-        {
-            return false;
-        }
-        Node current = this.root;
+        //if (this.root == null)
+        //{
+        //    return false;
+        //}
+        //Node current = this.root;
 
-        while (current != null)
-        {
-            if (current.Value.CompareTo(element) == 0)
-            {
-                return true;
-            }
-            else if (current.Value.CompareTo(element) > 0)
-            {
-                current = current.Left;
-            }
-            else if (current.Value.CompareTo(element) < 0)
-            {
-                current = current.Right;
-            }
-        }
-        return false;
+        //while (current != null)
+        //{
+        //    if (current.Value.CompareTo(element) == 0)
+        //    {
+        //        return true;
+        //    }
+        //    else if (current.Value.CompareTo(element) > 0)
+        //    {
+        //        current = current.Left;
+        //    }
+        //    else if (current.Value.CompareTo(element) < 0)
+        //    {
+        //        current = current.Right;
+        //    }
+        //}
+        return this.FindNode(element) != null;
 
 
     }
